@@ -1,6 +1,7 @@
 // CARGA INICIAL de datos 
 const productos_base = [
     {
+        id: 1,
         descripción:"Procesador Intel Core i5. Memoria RAM de 8GB. Resolución de 1920x1080 px. Placa de video NVIDIA GeForce GTX 1650.La duración de la batería depende del uso que se le dé al producto.",
         precio_Unitario: 417000,
         nombre: "Notebook Hp Victus 15-fa0031dx 8gb Ram 512gb Ssd Intel Core I5 Nvidia Geforce Gtx 1650 4gb Gddr6 15.6 Fhd 144hz Windows 11",
@@ -10,6 +11,7 @@ const productos_base = [
         permite_stock_negativo: false,
     },
     {
+        id: 2,
         descripción:" Resolución máxima de video: 1280px x 720px. Imagen con resolución de 1.2Mpx. Interfaz: USB-A.Funciona con Chrome OS, macOS 10.10, Windows 8.Adecuada para notebook, pc de escritorio.",
         precio_Unitario: 12500,
         nombre: "Cámara web Logitech C505e HD 30FPS color negro",
@@ -19,6 +21,7 @@ const productos_base = [
         permite_stock_negativo: false,
     },
     {
+        id: 3, 
         descripción:"Conectividad con múltiples dispositivos. Resiste a salpicaduras. Tipo de teclado: mecánico. Con conector USB 2.0.Con cable removible.",
         precio_Unitario: 27500,
         nombre: "Teclado Bluetooth Redragon Fizz Pro Argentina K616-rgb-ar Qwerty Red Español Color Celeste Y Blanco Con Luz Rgb",
@@ -37,11 +40,9 @@ const local_storage_llaves = {
 window.onload = function() {
     const productos = ObtenerLocalStorage(local_storage_llaves.PRODUCTOS);
 
-    if (productos === null || productos === undefined ){
+    if (!productos) {
     AgregarLocalStorage(local_storage_llaves.PRODUCTOS, productos_base ); 
-    } else {
-        console.log("el local storage posee datos");
-    }
+    } 
 };
 
 function ObtenerLocalStorage(key) {
