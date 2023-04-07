@@ -10,7 +10,7 @@ if (productos) {
     const lista =   JSON.parse(productos);
     let htmlString = ""; 
     lista.forEach ((producto) => {
-    htmlString += CreateCards(producto.foto_url, producto.nombre,`../pages/productos_id.html?id=${producto.id}`); 
+    htmlString += CreateCards(producto.Foto_url, producto.nombre, Url(producto.id)); 
     });
     div_productos.innerHTML = htmlString;
 }else {
@@ -27,4 +27,7 @@ function CreateCards (image, title, url ) {
       <a href="${url}" class="btn btn-dark">Detalle </a>
     </div>
   </div>`;
+}
+function Url(id){
+  return `../pages/productos_id.html?id=${id}`;
 }

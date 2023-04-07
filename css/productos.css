@@ -1,11 +1,11 @@
 h1 {
-    color: antiquewhite;
-};
-
-#lista {
-    display : flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: red; 
-    width:100% Im !important;
+    color: rgb(245, 244, 243);
 }
+body {
+    background-image: url(https://mcdn.wallpapersafari.com/medium/94/51/NUsItf.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-fluid {
+   
+} 
